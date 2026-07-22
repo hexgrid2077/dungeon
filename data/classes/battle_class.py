@@ -3,6 +3,7 @@ from time import sleep
 from rich.console import Console
 from data.data_files.config import hud_theme
 from data.classes.item_class import Item
+from data.data_files import signs
 
 console = Console(theme=hud_theme, highlight=False)
 
@@ -74,15 +75,9 @@ class Battle:
         print(f"Enemy Attack:\t{enemy_atk}")
 
 
-
-
-        
-
-
-
-
     def loop(self, player, enemy):
-        console.print("------------------------------- BATTLE -----------------------------", style="enemy")
+        console.print(signs.battle_title, style="weapons")
+        # console.print("------------------------------- BATTLE -----------------------------", style="enemy")
         console.print(f"\nYou encounter a [enemy]{enemy.name.title()}[/], {enemy.description}...")
         console.print(f"[taunt]\"{enemy.taunt}\"[/]\n")
         sleep(1)
