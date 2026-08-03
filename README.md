@@ -1,3 +1,11 @@
+```
+██████╗ ██╗   ██╗███╗   ██╗ ██████╗ ███████╗ ██████╗ ███╗   ██╗
+██╔══██╗██║   ██║████╗  ██║██╔════╝ ██╔════╝██╔═══██╗████╗  ██║
+██║  ██║██║   ██║██╔██╗ ██║██║  ███╗█████╗  ██║   ██║██╔██╗ ██║
+██║  ██║██║   ██║██║╚██╗██║██║   ██║██╔══╝  ██║   ██║██║╚██╗██║
+██████╔╝╚██████╔╝██║ ╚████║╚██████╔╝███████╗╚██████╔╝██║ ╚████║
+╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝
+```
 # Dungeon
 This project was me learning Object Oriented Programming in Python and having a blast doing it. It reminds me of my friends who played MUDs (Multi User Dungeons) back in the mid 90s and just made my imagination run wild with possibilities.
 Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, or some browser thing. Doesn't matter, I keep adding and tweaking and my skills have jumped since. If it isn't fun anymore I will stop doing it.
