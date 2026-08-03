@@ -85,7 +85,7 @@ class Battle:
         while player.is_alive() and enemy.is_alive():
             if player.weapon["main-hand"].name:
                 weapon = player.weapon["main-hand"].name
-            console.print("--------------------------------------------------------------------", style="exit")
+            console.print("----------------------------------------------------------------", style="exit")
             console.print(f"HP {player.hp}/{player.max_hp}")
 
             player_attack_damage = randint(0,player.stats["atk"])

@@ -3,8 +3,9 @@ locations = {
     # Crypt - Starting place
     (0,0):{
         "name":"crypt",
-        "description":"You wake up in the darkness with a scorching pain in your jaw... You realize you're in an underground crypt. "
-        "There is light coming in from the staircase to the [bold]north[/]. There is a fallen [enemy]skeleton warrior[/] with bones scattered everywhere and his weapons and armor are ripe for the taking!",
+        "description":"You wake up in the darkness with a scorching pain in your jaw...\nYou realize you're in an underground crypt.\n"
+        "There is light coming in from the staircase to the [bold]north[/].\n"
+        "A fallen [enemy]skeleton warrior[/] lays with bones scattered everywhere...\n",
         "items":{
             "rusty dagger":2,
             "cloth tunic":1,
