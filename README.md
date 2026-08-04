@@ -19,6 +19,7 @@ This project was me learning Object Oriented Programming in Python and having a 
 It reminds me of my friends who played MUDs (Multi User Dungeons) back in the mid 90s and just made my imagination run wild with possibilities.
 Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, or some browser thing. Doesn't matter, I keep adding and tweaking and my skills have jumped since. If it isn't fun anymore I will stop doing it.
 
+---
 # TODO
 **The two bugs here have a similar problem about creating items.**
 #FIXME If player has no potions and you get one off of an enemy in battle, it doesn't have the setup_weapon_armor_consumable_object function in the Battle class.'
@@ -26,7 +27,6 @@ It is already in battle_class in line 37-38. Must recreate the bug.
 # Loot menu
 #FIXME picking up individual items has some mission arguments.
 # Current Mission
-- Looks like my repo is setup as mikeherb or hexgrid2077 in github but my personal repo name on my thinkpad is mikeherb. I don't know. 
 - Scan Area still has white font lol
 - if we dump to json files on the inventory thing, can we edit items monsters and locations in excel?
 ## Battle System
@@ -51,12 +51,11 @@ It is already in battle_class in line 37-38. Must recreate the bug.
 - Quest items like lost letters you can read and get clues/lore
 - keys that can open doors in sub menus, or open chests.
 - props as objects that would include chests, doors, levers with their own sub menus
-## FIXES
 
+## FIXES
 - if the player only has one item of that armor/weapon sub_class, just equip it, don't make them push 1. You would have to tally up all items and see how many are in each subclass.
 # Engine
 ## Display
-
 - we will be using Rich **Layouts** when the game mechanic basics are running.
 	- https://rich.readthedocs.io/en/stable/layout.html
 	- https://github.com/Textualize/rich/blob/master/examples/fullscreen.py
