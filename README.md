@@ -148,3 +148,4 @@ It is already in battle_class in line 37-38. Must recreate the bug.
 - Areas where you can climb a rope, fall through a trap door
 - pygcurse? https://github.com/asweigart/pygcurse
 - Cavesof Qud https://cavesofqud.com/
+- Maybe a web UI with Flask and SQLite database for stuff to save?
