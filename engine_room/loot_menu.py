@@ -3,9 +3,7 @@ from data.classes.item_class import Item
 from rich.console import Console
 from data.data_files.config import hud_theme
 
-
 console = Console(theme=hud_theme, highlight=False)
-
 
 def show_location_items(current_location, locations, player): # Makes an enumerated list of the item dictionary in that location
     location_items_dict = locations[current_location]["items"]
@@ -27,7 +25,6 @@ def show_location_items(current_location, locations, player): # Makes an enumera
         elif int(take_choice) in range(1,9):
             take_single_item(player, location_items_dict, int(take_choice))
 
-
 def take_all(location_items, player):
     for item,qty in location_items.items():
         if item in player.rucksack:
@@ -36,12 +33,9 @@ def take_all(location_items, player):
             new_item = Item.create_item(Item, item)
             new_item.qty = qty
             player.rucksack[new_item.name] = new_item
-            
-    # Remove the items from the location dictionary
-    temp_key_list = list(location_items.keys())
+    temp_key_list = list(location_items.keys()) # Remove the items from the location dictionary
     for key in temp_key_list:
         del location_items[key]
-
 
 def take_single_item(player, location_items_dict, take_choice):
     take_choice -= 1 # Shift back to starting at 0.
@@ -55,14 +49,12 @@ def take_single_item(player, location_items_dict, take_choice):
         add_to_player_inventory(player, req_item_name, req_item_qty)
         remove_from_location_inventory(location_items_dict, req_item_qty, req_item_name, available_item_qty)       
 
-
 def ensure_qty_is_available(available_item_qty, req_item_qty, req_item_name):
     if available_item_qty >= req_item_qty:
         return True
     else:
         console.print(f"\nThere is not enough {req_item_name}.\n")
         return False
-
 
 def add_to_player_inventory(player, req_item_name, req_item_qty):
     console.print(f"Transfering: {req_item_name} x {req_item_qty}\n")
@@ -72,7 +64,6 @@ def add_to_player_inventory(player, req_item_name, req_item_qty):
         new_item = Item.create_item(req_item_name)
         new_item.qty = req_item_qty
         player.rucksack[new_item.name] = new_item
-
 
 def remove_from_location_inventory(location_items_dict, req_item_qty, req_item_name, available_item_qty):
     if available_item_qty >= req_item_qty:

@@ -91,28 +91,30 @@ def scan_area(current_location, player):
      else:
           show_location_items(current_location, locations, player)
 
-
 def prompt(current_location, player):
-    movement = {"n": ((current_location[0]+0),(current_location[1]+1)), "e": ((current_location[0]+1),(current_location[1]+0)), 
-                "s": ((current_location[0]+0),(current_location[1]-1)), "w": ((current_location[0]-1),(current_location[1]+0)),
-                "north": ((current_location[0]+0),(current_location[1]+1)), "east": ((current_location[0]+1),(current_location[1]+0)), 
-                "south": ((current_location[0]+0),(current_location[1]-1)), "west": ((current_location[0]-1),(current_location[1]+0))}
+    movement_choices = {
+        "n": ((current_location[0]+0),(current_location[1]+1)), "e": ((current_location[0]+1),(current_location[1]+0)), 
+        "s": ((current_location[0]+0),(current_location[1]-1)), "w": ((current_location[0]-1),(current_location[1]+0)),
+        "north": ((current_location[0]+0),(current_location[1]+1)), "east": ((current_location[0]+1),(current_location[1]+0)), 
+        "south": ((current_location[0]+0),(current_location[1]-1)), "west": ((current_location[0]-1),(current_location[1]+0))}
+        
+    non_move_choices = {
+        "i": show_inventory,
+        "a": scan_area,
+        "t": status,
+        "m": show_map,}
     
     while player.is_alive():
         display_scene(current_location)
         console.print(f"\nHP [stat]{player.hp}[/]/[stat]{player.max_hp}[/]\tMP [stat]{player.mp}[/]/[stat]{player.max_mp}[/]", style="hp-mp")
         console.print("[b u]I[/]nventory | Scan [b u]A[/]rea | S[b u]t[/]atus | [b u]M[/]ap | Sa[b u]v[/]e/Load", style="menu")
-        show_exits(movement, current_location)
+        show_exits(movement_choices, current_location)
         console.print("\n> ", style="prompt",end='')
 
-        non_move_choices = {"i": show_inventory, #(player)
-                            "a": scan_area, #(current_location)
-                            "t": status,
-                            "m": show_map,}
         try:
             choice = input("").lower()
-            if choice in movement:
-                current_location = move(current_location, movement.get(choice), player); sleep(0.3)
+            if choice in movement_choices:
+                current_location = move(current_location, movement_choices.get(choice), player); sleep(0.3)
             if choice in non_move_choices:
                 if choice == "i": sleep(0.3); show_inventory(player)
                 if choice == "a": sleep(0.3); scan_area(current_location, player)

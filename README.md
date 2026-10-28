@@ -8,11 +8,11 @@
 ```
 # Running the game
 You will need Rich for the text color and of course Python 3. This is entirely in the terminal.
-In the console type:
+Inside the Dungeon folder in the terminal type:
 ```shell
 pip install -r requirements.txt
 ```
-Once you have that, just run main.py and away you go!
+Once you have that, just run main.py with python and away you go!
 
 # About the project
 This project was me learning Object Oriented Programming in Python and having a blast doing it. I spent a Christmas holiday figuring out how to organize the chaos when I ended up having major import problems. OOP was the answer and I learned a lot.
@@ -21,7 +21,7 @@ Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, o
 
 ---
 # TODO
-**The two bugs here have a similar problem about creating items.**
+SHould I just port this whole thing over to Rich layouts?
 #FIXME If player has no potions and you get one off of an enemy in battle, it doesn't have the setup_weapon_armor_consumable_object function in the Battle class.'
 It is already in battle_class in line 37-38. Must recreate the bug.
 # Loot menu
@@ -33,7 +33,7 @@ It is already in battle_class in line 37-38. Must recreate the bug.
 - The shield doesn't have any defense stats
 ## player_attack_roll
 - the combatants, turn order which could depend on speed, runs the loop til one dies or flees, victory /defeat cleanup to trigger the loot process.
-- Player death. Once we have player death and maybe a boss, the game is complete and then we are in improvements.
+- Once we have a boss, the game is complete and then we are in improvements.
 - test battle with gear on vs wraith
 - Get the player attack roll function working and do the same for the enemy.
 - Show the enemy status like "Healthy, limping a bit, almost dead"
@@ -84,7 +84,7 @@ It is already in battle_class in line 37-38. Must recreate the bug.
 ### Shop
 - Have a shop to buy new gear and sell their junk.
 ## Battles
-- Enemies have very random loot. Right now the wraith drops a potion and 25 gold every fight.
+- Enemies have very random loot. Right now the wraith drops a potion and 25 gold every fight. Use the same idea as the enemy chance thing
 - manual attack item run options so you can get away or heal if you need.
 - Very much like the original Ultima games to start. Maybe a party later with companions you could encounter or hire at the tavern.
 - Enemies can blend in with the current surroundings like... Skeleton does a backflip off the stairs.

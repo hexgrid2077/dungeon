@@ -5,9 +5,9 @@ from data.data_files.config import hud_theme
 console = Console(theme=hud_theme, highlight=False)
 
 weapon_temp = []
-armor_temp = []
-cons_temp = []
-quest_temp = []
+armor_temp =  []
+cons_temp =   []
+quest_temp =  []
 list_of_temps = [weapon_temp, armor_temp, cons_temp, quest_temp]
 
 def item_class_sorter(player):
@@ -97,7 +97,7 @@ def print_equipped_items(player):
     def equip_weapon_submenu(player):
         item_class_sorter(player)
         mainhand_temp_list = []
-        offhand_temp_list = []
+        offhand_temp_list =  []
 
         # Sort into each sub_class
         for key, value in player.rucksack.items():
@@ -140,10 +140,10 @@ def print_equipped_items(player):
 
     def equip_armor_submenu(player):
         item_class_sorter(player)
-        head_temp_list = []
-        body_temp_list = []
+        head_temp_list =  []
+        body_temp_list =  []
         hands_temp_list = []
-        feet_temp_list = []
+        feet_temp_list =  []
 
         # Sort into each sub_class
         for key, value in player.rucksack.items():
@@ -253,21 +253,24 @@ def consumable_submenu(player):
         print(f"{option[0]+1}) {option[1][0].title()} x {option[1][1]}")
     console.print("\nChoose Number:")
     console.print("> ", style="prompt", end='')
-    consume_choice = int(input(""))
+    try:
+        consume_choice = int(input(""))
+    except ValueError:
+        print("Not a number. Try again.")
+        consumable_submenu(player)
     consume_choice -= 1 # Shift back to starting at 0.
     try:
         chosen_item_name = cons_temp[consume_choice][0]
         print(f"Going to consume {chosen_item_name.title()}")
         player.use_item(chosen_item_name)
-
     except IndexError:
         print("You do not have this item.")
         consumable_submenu(player)
         # FIXME This needs a back option if you don't want to use anything.
 
-
-
-
-
-
-
+#------------------------------------------------------------------------------------------------
+# TODO Consumable Submenu
+# Have a flag for numeric only so we can make exceptions like line 258 and line 266 in this file.
+# Or if it's characters like a e i whatever.
+# Input the string choices like Armor, A and then the submenu Armor submenu
+# So calling the function would be like self.submenu(armor_submenu_dict, characters) or self.submenu(consumable_submenu_dict, numeric)

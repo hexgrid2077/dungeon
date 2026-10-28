@@ -33,9 +33,9 @@ class Battle:
 
     def create_loot_objects(self, player, enemy):
         for item, qty in enemy.loot.items():
-            if item in player.rucksack:
+            if item in player.rucksack: # If the item exists in the player's rucksack, increase the qty
                 player.rucksack[item].qty += qty
-            else:
+            else: # But if not, create the item. FIXME howcome this isn't working though?
                 player.rucksack[item] = Item.create_item(self, item)      
 
     def player_attack_roll(self, player, enemy):
