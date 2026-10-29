@@ -16,14 +16,19 @@ Once you have that, just run main.py with python and away you go!
 
 # About the project
 This project was me learning Object Oriented Programming in Python and having a blast doing it. I spent a Christmas holiday figuring out how to organize the chaos when I ended up having major import problems. OOP was the answer and I learned a lot.
-It reminds me of my friends who played MUDs (Multi User Dungeons) back in the mid 90s and just made my imagination run wild with possibilities.
+It reminds me of my friends growing up who played MUDs (Multi User Dungeons) back in the mid 90s and just made my imagination run wild with possibilities.
 Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, or some browser thing. Doesn't matter, I keep adding and tweaking and my skills have jumped since. If it isn't fun anymore I will stop doing it.
 
 ---
-# TODO
-SHould I just port this whole thing over to Rich layouts?
-#FIXME If player has no potions and you get one off of an enemy in battle, it doesn't have the setup_weapon_armor_consumable_object function in the Battle class.'
-It is already in battle_class in line 37-38. Must recreate the bug.
+# RICH LAYOUT
+- Should I just port this whole thing over to Rich layouts?
+- #FIXME If player has no potions and you get one off of an enemy in battle, it doesn't have the setup_weapon_armor_consumable_object function in the Battle class.'
+- It is already in battle_class in line 37-38. Must recreate the bug.
+
+# LEVEL/MONSTER/ITEM EDITOR
+- First get the JSON files loading at startup
+- Then build a CustomTkinter (since I am familiar with it and it looks decent) to modify it.
+
 # Loot menu
 #FIXME picking up individual items has some mission arguments.
 # Current Mission
