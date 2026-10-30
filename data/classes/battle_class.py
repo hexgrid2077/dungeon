@@ -27,7 +27,6 @@ class Battle:
         console.print(f"\nThe [enemy]{enemy.name.title()}[/] dropped:")
         for item, qty in enemy.loot.items():
             console.print(f"[loot]{item.title()}[/] x {qty}")
-        print("Loot_corpse function(). Is it going to create a loot object?\n\n")
         self.create_loot_objects(player, enemy)
         # return False
 

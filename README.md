@@ -22,8 +22,6 @@ Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, o
 ---
 # RICH LAYOUT
 - Should I just port this whole thing over to Rich layouts?
-- #FIXME If player has no potions and you get one off of an enemy in battle, it doesn't have the setup_weapon_armor_consumable_object function in the Battle class.'
-- It is already in battle_class in line 37-38. Must recreate the bug.
 
 # LEVEL/MONSTER/ITEM EDITOR
 - First get the JSON files loading at startup
@@ -51,7 +49,8 @@ Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, o
 - Add attack type to weapons (slashing, impact, piercing)
 
 # Experience
-- Scan Area should run the whole "You are in the whatever" description. But geting out of the inventory menu should not run the description again.
+- The x's for showing item quantities should be a different color like red.
+- Scan Area should run the whole "You are in the whatever" description. But getting out of the inventory menu should not run the description again.
 - Each area is a curated experience like a D&D package you'd buy at Sentry Box, with a grand boss, some lore, keys and quest items, traps etc.
 - Treasure chests instead of just laying on the floor. You can open the treasure chest and then the contents are available to take.
 - Quest items like lost letters you can read and get clues/lore
