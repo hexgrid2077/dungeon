@@ -23,6 +23,12 @@ Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, o
 # RICH LAYOUT
 - Should I just port this whole thing over to Rich layouts?
 
+# RICH LIVE DISPLAY
+- Then get the scrolling text going inside a window
+
+# KEYBOARD INPUT
+- Then get pynput POC
+
 # LEVEL/MONSTER/ITEM EDITOR
 - First get the JSON files loading at startup
 - Then build a CustomTkinter (since I am familiar with it and it looks decent) to modify it.
