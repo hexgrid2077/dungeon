@@ -34,10 +34,19 @@ class Item:
         master_dicts = [consumable_master, weapon_master, armor_master, quest_master]
         
         class_map = {
-        "Consumable":{"classname": Consumable,"masterlist": consumable_master},
-        "Weapon":{"classname": Weapon,"masterlist": weapon_master},
-        "Armor":{"classname": Armor,"masterlist": armor_master},
-        "Quest":{"classname": Quest,"masterlist": quest_master},}
+        "Consumable":{
+                "classname": Consumable,
+                "masterlist": consumable_master},
+        "Weapon":{
+                "classname": Weapon,
+                "masterlist": weapon_master},
+        "Armor":{
+                "classname": Armor,
+                "masterlist": armor_master},
+        "Quest":{
+                "classname": Quest,
+                "masterlist": quest_master},
+        }
 
         for master_dict in master_dicts:
             if item in master_dict:

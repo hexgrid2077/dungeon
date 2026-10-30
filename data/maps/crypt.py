@@ -26,8 +26,8 @@ locations = {
             "torch":1,
             },
         "enemies":{
-            (0,30):"wraith",
-            (31,100):"clear",
+            (0,90):"wraith",
+            (91,100):"clear",
             },
         "visited":"n",
         },

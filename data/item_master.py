@@ -170,10 +170,10 @@ quest_master = {
 
 
 starting_items = [
-    ("gold", 25),
+    # ("gold", 25),
     ("torch", 2),
     ("graveyard sigil", 1),
-    ("health potion", 2),
+    ("health potion", 1),
     ("rusty dagger", 1),
     ("water skin", 1),
 

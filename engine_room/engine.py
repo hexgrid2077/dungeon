@@ -130,7 +130,6 @@ def prompt(current_location, player):
 
 def create_starting_inventory(player):
         from data.item_master import starting_equipment, starting_items
-
         for entry in starting_items:
             new_item = Item.create_item(Item, entry[0])
             new_item.qty = entry[1]

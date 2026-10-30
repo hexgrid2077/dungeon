@@ -246,30 +246,28 @@ def show_inventory(player):
     match_submenu(submenu_choice, player)
 
 def consumable_submenu(player):
-
     console.print(f"\nItem Options:", style="submenu")
     numerated_list = list(enumerate(cons_temp))
     for option in numerated_list:
         print(f"{option[0]+1}) {option[1][0].title()} x {option[1][1]}")
-    console.print("\nChoose Number:")
-    console.print("> ", style="prompt", end='')
-    try:
-        consume_choice = int(input(""))
-    except ValueError:
-        print("Not a number. Try again.")
-        consumable_submenu(player)
-    consume_choice -= 1 # Shift back to starting at 0.
-    try:
-        chosen_item_name = cons_temp[consume_choice][0]
-        print(f"Going to consume {chosen_item_name.title()}")
-        player.use_item(chosen_item_name)
-    except IndexError:
-        print("You do not have this item.")
-        consumable_submenu(player)
-        # FIXME This needs a back option if you don't want to use anything.
+    if cons_temp: 
+        console.print("\nChoose Number: (ENTER to return)")
+        console.print("> ", style="prompt", end='')
+        try:
+            consume_choice = int(input(""))
+            if consume_choice == "":
+                print("You entered ENTER. That should work!")
+            consume_choice -= 1 # Shift back to starting at 0.
+            try:
+                chosen_item_name = cons_temp[consume_choice][0]
+                player.use_item(chosen_item_name)
+            except IndexError:
+                print("You do not have this item.")
+        except ValueError:
+            show_inventory(player) # If they enter a blank.
 
 #------------------------------------------------------------------------------------------------
-# TODO Consumable Submenu
+# TODO Reusable Consumable Submenu
 # Have a flag for numeric only so we can make exceptions like line 258 and line 266 in this file.
 # Or if it's characters like a e i whatever.
 # Input the string choices like Armor, A and then the submenu Armor submenu

@@ -51,6 +51,7 @@ Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, o
 - Add attack type to weapons (slashing, impact, piercing)
 
 # Experience
+- Scan Area should run the whole "You are in the whatever" description. But geting out of the inventory menu should not run the description again.
 - Each area is a curated experience like a D&D package you'd buy at Sentry Box, with a grand boss, some lore, keys and quest items, traps etc.
 - Treasure chests instead of just laying on the floor. You can open the treasure chest and then the contents are available to take.
 - Quest items like lost letters you can read and get clues/lore
