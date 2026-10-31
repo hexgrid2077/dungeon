@@ -20,18 +20,8 @@ It reminds me of my friends growing up who played MUDs (Multi User Dungeons) bac
 Who knows, maybe I'll pack it up as a standalone game using NCurses or PyGame, or some browser thing. Doesn't matter, I keep adding and tweaking and my skills have jumped since. If it isn't fun anymore I will stop doing it.
 
 ---
-# NEW IDEA
-- I need to put print statements into a ~40 line buffer file that gets updated when new data goes onto the screen.
-So instead of print, we'll write to the buffer.
-# RICH LAYOUT
-- Should I just port this whole thing over to Rich layouts?
-
-# RICH LIVE DISPLAY
-
-- Then get the scrolling text going inside a window
-
-# KEYBOARD INPUT
-- Then get pynput POC
+# NEW PROOF OF CONCEPT IDEA
+Textual is going to be perfect for this. I will learn how to run that and then get building. This will be a fun thing to do when I need a break from C or linux/BSD.
 
 # LEVEL/MONSTER/ITEM EDITOR
 - First get the JSON files loading at startup
